@@ -1,5 +1,4 @@
 # Seminar2020
-# 2020讨论班  
   
 [![指导教师](https://img.shields.io/badge/%E6%8C%87%E5%AF%BC%E6%95%99%E5%B8%88-%E5%87%A4%E4%B8%BD%E6%B4%B2-blue)](http://tongji.tjufe.edu.cn/info/1069/1217.htm)  
 ## 日程安排
