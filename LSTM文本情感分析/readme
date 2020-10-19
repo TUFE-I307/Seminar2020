@@ -1,1 +1,2 @@
-
+##代码运行需要下载词向量，下载第二列Word + Ngram的，下载的网站：https://github.com/Embedding/Chinese-Word-Vectors
+##代码运行tensorflow版本为·1.1·，版本较高的情况无法运行，如有需要请创建虚拟环境安装低版本的tf
