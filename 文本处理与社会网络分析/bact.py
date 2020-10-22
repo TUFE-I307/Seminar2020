@@ -17,13 +17,11 @@ import time
 import jieba.posseg 
 from datetime import datetime
 import os
+from algorithm import SpectralClustering
 
 
 def read(csv_name): #逐日分析
-    #os.chdir('C:\\Users\\SA\\Documents\\Research\\NDTE\\data')
     w=pd.read_csv(csv_name)#或 header=0,不能写True
-    #w=w.iloc[:,[1,4,7,9,10,11]]
-    #w.columns=['blog','origin','pubtime','like','transfer','comment']
     w['pubtime'] = pd.to_datetime(w['pubtime'])
     w.pubtime.dt.strftime("%Y-%m-%d")
     w['date'] = w['pubtime'].dt.date
@@ -96,13 +94,11 @@ def TFIDF(da,t):
     feature_word = list(set(feature_word))
     return feature_word
 
-
 def mygraph(feature_word,da,date,t1,t2):
     length = len(feature_word)
     adjacent = [[0 for i in range(length)] for j in range(length)]
     for line in da:
         line = line.split()
-        #len_line = len(line)
         for i in range(length):
             if feature_word[i] in line:
                 adjacent[i][i] += 1
@@ -119,8 +115,8 @@ def mygraph(feature_word,da,date,t1,t2):
                 pass
     G=nx.Graph()
     G.add_nodes_from(feature_word)
-    G.add_weighted_edges_from(E) 
-    com_dict = community.best_partition(G) 
+    G.add_weighted_edges_from(E)
+    com_dict = community.best_partition(G)
     coms = [[i for i in com_dict.keys() if com_dict[i] == com] for com in set(com_dict.values())]
     color = []
     # 黄色'#ffd900'绿色 '#aacf53'灰紫'#D291BC'灰色'#9ea1a3'淡紫'#C1BBDD'水蓝'#59b9c6'
@@ -165,7 +161,6 @@ def get_keywords(G, top, D=None):
     return ' '.join([i[0] for i in sorted(val_tmp.items(), key=lambda x:x[1], reverse=True)[:k]])
 
 if __name__ == '__main__':
-    a = time.time()
     w,d_range = read('./Data/d2.csv')
     title='1020'
     date='2020-02-01'
