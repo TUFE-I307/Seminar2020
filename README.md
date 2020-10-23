@@ -5,6 +5,6 @@
 主题 | 主讲人 | 时间
 :----: | :----: | :----:
 [LSTM文本情感分析](https://github.com/TUFE-I307/Seminar2020/tree/main/LSTM%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90) | [耿铭涛](https://github.com/740904774) | ~~2020-10-15~~
-[Social Network Analysis](https://github.com/TUFE-I307/Seminar2020/tree/main/Social%20Network%20Analysis) | [韩琳琳](https://github.com/SA5233) | 2020-10-22
+[Social Network Analysis](https://github.com/TUFE-I307/Seminar2020/tree/main/Social%20Network%20Analysis) | [韩琳琳](https://github.com/SA5233) | ~~2020-10-22~~
 
 
