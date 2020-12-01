@@ -16,7 +16,6 @@ import numpy as np
 import time
 import jieba.posseg 
 from datetime import datetime
-import os
 
 
 def read(csv_name): #逐日分析
