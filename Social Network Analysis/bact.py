@@ -159,7 +159,7 @@ def get_keywords(G, top, D=None):
     return ' '.join([i[0] for i in sorted(val_tmp.items(), key=lambda x:x[1], reverse=True)[:k]])
 
 if __name__ == '__main__':
-    w,d_range = read('./Data/d1.csv')
+    w,d_range = read('./Data/d2.csv')
     title='1020'
     date='2020-02-01'
     t1=0.001
